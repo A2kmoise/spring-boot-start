@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: sping
+
+stripe:
+  apiUrl: https://a-noetapp.com
+  timeout: 1000
+  enabled: true
+  supported-currency: USD,EUR,RWF

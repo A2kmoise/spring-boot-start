@@ -2,15 +2,17 @@ package org.codewithmoise.sping;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 
 @SpringBootApplication
 public class SpingApplication {
 
     public static void main(String[] args) {
-        //SpringApplication.run(SpingApplication.class, args);
-        var OrderService = new OrderService();
-        OrderService.setPaymentService(new PaypalService());
+        ApplicationContext context =  SpringApplication.run(SpingApplication.class, args);
+        var OrderService = context.getBean(OrderService.class);
+        var NotificationManager = context.getBean(NotificationManager.class);
         OrderService.placeOrder();
+        NotificationManager.sendMessage("hello");
     }
 
 }

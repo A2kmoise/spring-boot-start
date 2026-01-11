@@ -1,8 +1,6 @@
 package org.codewithmoise.sping;
 
 
-import org.springframework.stereotype.Service;
-
 
 public class PaypalService implements PaymentService {
     @Override

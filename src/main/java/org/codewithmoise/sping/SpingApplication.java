@@ -9,6 +9,7 @@ public class SpingApplication {
 
     public static void main(String[] args) {
         ApplicationContext context =  SpringApplication.run(SpingApplication.class, args);
+        var resource = context.getBean(HeavyResource.class);
         var OrderService = context.getBean(OrderService.class);
         var NotificationManager = context.getBean(NotificationManager.class);
         OrderService.placeOrder();

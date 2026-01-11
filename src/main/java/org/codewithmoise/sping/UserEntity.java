@@ -15,7 +15,7 @@ public class UserEntity {
     private String email;
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private Profile profile;
+    private ProfileEntity profile;
 
     @ManyToMany
     @JoinTable(name = "wishlist",

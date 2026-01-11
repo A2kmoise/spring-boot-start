@@ -1,9 +1,17 @@
 spring:
   application:
     name: sping
+  datasource:
+    username: root
+    password:
+    url: jdbc:mysql://localhost:3306/sping?createDatabaseIfNotExist=true
 
 stripe:
   apiUrl: https://a-noetapp.com
   timeout: 1000
   enabled: true
   supported-currency: USD,EUR,RWF
+
+email:
+  host: https://smtp.gmail.com
+  port: 4567

@@ -9,13 +9,8 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class SpingApplication {
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext context =  SpringApplication.run(SpingApplication.class, args);
-        var resource = context.getBean(HeavyResource.class);
-        var OrderService = context.getBean(OrderService.class);;
-        var NotificationManager = context.getBean(NotificationManager.class);
-        OrderService.placeOrder();
-        NotificationManager.sendMessage("hello");
-        context.close();
+        ApplicationContext context =  SpringApplication.run(SpingApplication.class, args);
+
     }
 
 }

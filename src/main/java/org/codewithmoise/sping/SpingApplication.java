@@ -11,6 +11,7 @@ public class SpingApplication {
         ApplicationContext context =  SpringApplication.run(SpingApplication.class, args);
         var resource = context.getBean(HeavyResource.class);
         var OrderService = context.getBean(OrderService.class);
+        var OrderServiceII = context.getBean(OrderService.class);
         var NotificationManager = context.getBean(NotificationManager.class);
         OrderService.placeOrder();
         NotificationManager.sendMessage("hello");
